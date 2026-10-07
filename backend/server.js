@@ -27,8 +27,10 @@ app.get("/", (req, res) => {
 
 // Blog routes
 const blogRoutes = require("./routes/blogRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 app.use("/api/blogs", blogRoutes);
+app.use("/api/auth", authRoutes);
 
 // Swagger documentation
 app.use(
